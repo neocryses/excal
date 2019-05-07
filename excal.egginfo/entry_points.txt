@@ -1,0 +1,3 @@
+[console_scripts]
+ecal = ecal.cli:main
+

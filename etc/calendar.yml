@@ -1,0 +1,51 @@
+header:
+  weekday:
+    background: "E2EFDA"
+    font: "ＭＳ Ｐゴシック"
+    size: 11
+    bold: True
+    italic: False
+    color: "000000"
+  saturday:
+    background: "DDEBF7"
+    font: "ＭＳ Ｐゴシック"
+    size: 11
+    bold: True
+    italic: False
+    color: "0070C0"
+  sunday:
+    background: "FCE4D6"
+    font: "ＭＳ Ｐゴシック"
+    size: 11
+    bold: True
+    italic: False
+    color: "FF0000"
+dates:
+  weekday:
+    background: "FFFFFF"
+    font: "ＭＳ Ｐゴシック"
+    size: 11
+    bold: False
+    italic: False
+    color: "808080"
+  saturday:
+    background: "F5F9FD"
+    font: "ＭＳ Ｐゴシック"
+    size: 11
+    bold: False
+    italic: False
+    color: "808080"
+  sunday:
+    background: "FDF0E9"
+    font: "ＭＳ Ｐゴシック"
+    size: 11
+    bold: False
+    italic: False
+    color: "808080"
+  other:
+    background: "F2F2F2"
+    font: "ＭＳ Ｐゴシック"
+    size: 9
+    bold: False
+    italic: False
+    color: "808080"

@@ -1,0 +1,18 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+excal = {editable = true,path = "."}
+pylint = "*"
+yapf = "*"
+flake8 = "*"
+isort = "*"
+pytest = "*"
+
+[packages]
+excal = {editable = true,path = "."}
+
+[requires]
+python_version = "3.7"
