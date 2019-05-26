@@ -154,7 +154,7 @@ class ExcelCalendar():
         cal_list = cal.monthdatescalendar(self.date.year, self.date.month)
 
         worksheet = self.workbook.active
-        worksheet.title = self.date.strftime("%Y%-m")
+        worksheet.title = self.date.strftime("%Y%m")
 
         worksheet.row_dimensions[1].height = 22.50
         for column_index, date in enumerate(cal_list[0], 1):
@@ -174,9 +174,15 @@ class ExcelCalendar():
             worksheet.row_dimensions[row_index].height = 54.75
             for column_index, date in enumerate(row, 1):
                 if date.month != self.date.month:
-                    val = date.strftime("%-m/%-d") + "\n"
+                    if os.name == 'nt':
+                        val = date.strftime("%#m/%#d") + "\n"
+                    else:
+                        val = date.strftime("%-m/%-d") + "\n"
                 else:
-                    val = date.strftime("%-d") + "\n"
+                    if os.name == 'nt':
+                        val = date.strftime("%#d") + "\n"
+                    else:
+                        val = date.strftime("%-d") + "\n"
                 current_cell = worksheet.cell(column=column_index,
                                               row=row_index,
                                               value=val)

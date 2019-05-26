@@ -17,29 +17,20 @@ from . import util as ut
 def main(dates, config_path, generate_flag):
     """Utility tool to generate excel calendars."""
 
-    try:
-        workbooks = []
+    workbooks = []
 
-        if generate_flag:
-            cf.generate_config_file()
+    if generate_flag:
+        cf.generate_config_file()
 
-        config = cf.load_config(config_path)
+    config = cf.load_config(config_path)
 
-        if not dates:
-            excal = cl.ExcelCalendar(dt.date.today().replace(day=1), config)
+    if not dates:
+        excal = cl.ExcelCalendar(dt.date.today().replace(day=1), config)
+        workbooks.append(excal)
+    else:
+        for date in dates:
+            excal = cl.ExcelCalendar(ut.parse_date_string(date), config)
             workbooks.append(excal)
-        else:
-            for date in dates:
-                excal = cl.ExcelCalendar(ut.parse_date_string(date), config)
-                workbooks.append(excal)
 
-        for workbook in workbooks:
-            workbook.paint_calendar()
-
-    except (ValueError, FileExistsError) as error:
-        click.echo("<Error> {}".format(error))
-        sys.exit(1)
-
-
-if __name__ == "__main__":
-    sys.exit(main())  # pragma: no cover
+    for workbook in workbooks:
+        workbook.paint_calendar()

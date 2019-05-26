@@ -8,8 +8,8 @@ import sys
 
 import yaml
 
-ROOT_PATH = os.path.abspath(os.path.dirname(os.path.dirname(__file__)))
-DEFAULT_CONFIG_PATH = os.path.join(ROOT_PATH, "etc", "calendar.yml")
+ROOT_PATH = os.path.abspath(os.path.dirname(__file__))
+DEFAULT_CONFIG_PATH = os.path.join(ROOT_PATH, "calendar.yml")
 CWD = os.getcwd()
 
 
@@ -38,5 +38,5 @@ def load_config(config_path=None):
     else:
         target_config_path = DEFAULT_CONFIG_PATH
 
-    with open(target_config_path, 'r') as config_file:
+    with open(target_config_path, 'r', encoding='UTF-8') as config_file:
         return yaml.safe_load(config_file)
