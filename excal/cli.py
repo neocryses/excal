@@ -15,8 +15,17 @@ CONTEXT_SETTINGS = dict(help_option_names=['-h', '--help'])
 
 @click.command(context_settings=CONTEXT_SETTINGS)
 @click.argument("dates", nargs=-1, required=False)
-@click.option("-c", "--config", "config_path", default=None)
-@click.option("-g", "--generate-config", "generate_flag", is_flag=True)
+@click.option("-c",
+              "--config",
+              "config_path",
+              type=click.Path(exists=True),
+              default=None,
+              help="Specify the path to the config file to be used")
+@click.option("-g",
+              "--generate-config",
+              "generate_flag",
+              is_flag=True,
+              help="Generate config file inside current directory")
 def main(dates, config_path, generate_flag):
     """Utility tool to generate excel calendars."""
 
