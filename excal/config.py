@@ -8,6 +8,8 @@ import sys
 
 import yaml
 
+from . import exceptions as ex
+
 ROOT_PATH = os.path.abspath(os.path.dirname(__file__))
 DEFAULT_CONFIG_PATH = os.path.join(ROOT_PATH, "calendar.yml")
 CWD = os.getcwd()
@@ -22,7 +24,8 @@ def generate_config_file():
         shutil.copyfile(DEFAULT_CONFIG_PATH, dest_path)
         sys.exit(0)
     else:
-        raise FileExistsError('aborting since config file already exists.')
+        raise ex.ExcalFileExistsError(
+            'Aborting since config file already exists.')
 
 
 def load_config(config_path=None):

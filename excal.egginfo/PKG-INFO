@@ -1,60 +1,60 @@
 Metadata-Version: 1.1
-Name: ecal
+Name: excal
 Version: 0.1.0
 Summary: Excel Calendar generator
-Home-page: https://github.com/neocryses/ecal
+Home-page: https://github.com/neocryses/excal
 Author: Sho Sakakibara
 Author-email: audreyr@example.com
 License: MIT license
 Description: ====
-        ecal
+        excal
         ====
-        
-        
-        .. image:: https://img.shields.io/pypi/v/ecal.svg
-                :target: https://pypi.python.org/pypi/ecal
-        
-        .. image:: https://img.shields.io/travis/neocryses/ecal.svg
-                :target: https://travis-ci.org/neocryses/ecal
-        
-        .. image:: https://readthedocs.org/projects/ecal/badge/?version=latest
-                :target: https://ecal.readthedocs.io/en/latest/?badge=latest
+
+
+        .. image:: https://img.shields.io/pypi/v/excal.svg
+                :target: https://pypi.python.org/pypi/excal
+
+        .. image:: https://img.shields.io/travis/neocryses/excal.svg
+                :target: https://travis-ci.org/neocryses/excal
+
+        .. image:: https://readthedocs.org/projects/excal/badge/?version=latest
+                :target: https://excal.readthedocs.io/en/latest/?badge=latest
                 :alt: Documentation Status
-        
-        
-        
-        
+
+
+
+
         Excel Calendar generator
-        
-        
+
+
         * Free software: MIT license
-        * Documentation: https://ecal.readthedocs.io.
-        
-        
+        * Documentation: https://excal.readthedocs.io.
+
+
         Features
         --------
-        
+
         * TODO
-        
+
         Credits
         -------
-        
+
         This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
-        
+
         .. _Cookiecutter: https://github.com/audreyr/cookiecutter
         .. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
-        
-        
+
+
         =======
         History
         =======
-        
+
         0.1.0 (2019-04-30)
         ------------------
-        
+
         * First release on PyPI.
-        
-Keywords: ecal
+
+Keywords: excal
 Platform: UNKNOWN
 Classifier: Development Status :: 2 - Pre-Alpha
 Classifier: Intended Audience :: Developers
