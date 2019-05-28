@@ -12,7 +12,7 @@ def parse_date_string(date_string):
     Parse date string into datetmie object.
     """
     if not date_string.isdigit():
-        raise ValueError("input date must be numbers")
+        raise ex.ExcalValueError("Input date must be numbers")
 
     length = len(date_string)
     convert_string = None
